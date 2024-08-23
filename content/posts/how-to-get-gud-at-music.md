@@ -4,13 +4,9 @@ date = 2024-08-23T03:09:42+02:00
 draft = false
 +++
 
-## Welcome to my blog
+## Are you tired of being bad at music?
 
-This is my journal, I will mostly talk about music and coding perhaps.
+PRO TIP: Join the TalkBackOn Discord (tell your friends and attend the keynote sessions and feedback friday).
 
-## 
+LINK HERE --> [DISCORD LINK](https://discord.gg/pcWZqBc37a)
 
-kkhelkfjaskfo
-
-asjfklajsflkjfla
-gadg
