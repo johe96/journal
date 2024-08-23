@@ -8,3 +8,9 @@ draft = false
 
 This is my journal, I will mostly talk about music and coding perhaps.
 
+## 
+
+kkhelkfjaskfo
+
+asjfklajsflkjfla
+gadg
