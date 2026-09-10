@@ -1,6 +1,5 @@
 +++
 title = 'HOWTO earch and replace in Neovim'
-date = 2026-09-23T03:09:42+02:00
 draft = false
 +++
 
