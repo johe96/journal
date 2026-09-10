@@ -4,17 +4,40 @@
     <title>Journal</title>
     <link>http://localhost:1313/journal/</link>
     <description>Recent content on Journal</description>
-    <generator>Hugo -- 0.133.0</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2024 02:20:11 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 18:04:29 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/journal/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/journal/posts/my-first-post/</link>
-      <pubDate>Fri, 23 Aug 2024 02:20:11 +0200</pubDate>
-      <guid>http://localhost:1313/journal/posts/my-first-post/</guid>
-      <description>Introduction This is bold text, and this is emphasized text.
-Visit the [Hugo] (https://gohugo.io) website!</description>
+      <title>Neovim Stuff</title>
+      <link>http://localhost:1313/journal/posts/neovim-stuff/</link>
+      <pubDate>Thu, 10 Sep 2026 18:04:29 +0200</pubDate>
+      <guid>http://localhost:1313/journal/posts/neovim-stuff/</guid>
+      <description>&lt;h2 id=&#34;do-you-need-to-search-and-replace-something-quick&#34;&gt;Do you need to search and replace something QUICK?&lt;/h2&gt;
+&lt;p&gt;easy, just do:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:%s/&amp;gt;&amp;gt;insert_word_here&amp;lt;&amp;lt;/&amp;gt;&amp;gt;insert_replacement_here&amp;lt;&amp;lt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;optionally add &lt;code&gt;gc&lt;/code&gt; at the end like this &lt;code&gt;&amp;gt;&amp;gt;insert_replacement_here&amp;lt;&amp;lt;/gc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;this will prompt you to choose whether or not to search and replace a word in your file&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Get Gud at Music</title>
+      <link>http://localhost:1313/journal/posts/how-to-get-gud-at-music/</link>
+      <pubDate>Fri, 23 Aug 2024 03:09:42 +0200</pubDate>
+      <guid>http://localhost:1313/journal/posts/how-to-get-gud-at-music/</guid>
+      <description>&lt;h2 id=&#34;are-you-tired-of-being-bad-at-music&#34;&gt;Are you tired of being bad at music?&lt;/h2&gt;
+&lt;p&gt;PRO TIP: Join the TalkBackOn Discord (tell your friends and attend the keynote sessions and feedback friday).&lt;/p&gt;
+&lt;p&gt;LINK HERE &amp;ndash;&amp;gt; &lt;a href=&#34;https://discord.gg/pcWZqBc37a&#34;&gt;DISCORD LINK&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HOWTO earch and replace in Neovim</title>
+      <link>http://localhost:1313/journal/posts/search-and-replace-in-neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/posts/search-and-replace-in-neovim/</guid>
+      <description>&lt;h2 id=&#34;do-you-need-to-search-and-replace-something-quick&#34;&gt;Do you need to search and replace something QUICK?&lt;/h2&gt;
+&lt;p&gt;easy, just do:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:%s/&amp;gt;&amp;gt;insert_word_here&amp;lt;&amp;lt;/&amp;gt;&amp;gt;insert_replacement_here&amp;lt;&amp;lt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;optionally add &lt;code&gt;gc&lt;/code&gt; at the end like this &lt;code&gt;&amp;gt;&amp;gt;insert_replacement_here&amp;lt;&amp;lt;/gc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;this will prompt you to choose whether or not to search and replace a word in your file&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

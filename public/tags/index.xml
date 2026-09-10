@@ -4,7 +4,7 @@
     <title>Tags on Journal</title>
     <link>http://localhost:1313/journal/tags/</link>
     <description>Recent content in Tags on Journal</description>
-    <generator>Hugo -- 0.133.0</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/journal/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
