@@ -1,4 +1,5 @@
 baseURL: https://johe.dev/journal/
 locale: en-us
-title: Journal
+# title: Journal
+title: <johe/>
 theme: ["PaperMod"]

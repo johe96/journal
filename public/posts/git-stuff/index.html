@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/journal/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=journal/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Git Stuff | Journal</title>
+<meta name="keywords" content="">
+<meta name="description" content="Intro to Git and github
+Adding locally hosted code to GitHub
+The most straight forward way to push your locally stored code to a new repository is to first -
+Initialize a Git repository
+NOTE. Make sure that you&rsquo;re using the latest version of Git (2.28.0)
+
+
+Using Git Bash, navigate to the root directory where your code is stored.
+
+
+Inside the directory, we can now initialize our local directory as a Git repository, which means that we&rsquo;re marking this location to be a recognized (which we then can link to a remote Git repository which we will push our local code to later on).">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/journal/posts/git-stuff/">
+<link crossorigin="anonymous" href="/journal/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/journal/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/journal/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/journal/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/journal/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/journal/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/journal/posts/git-stuff/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/journal/" accesskey="h" title="Journal (Alt + H)">Journal</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Git Stuff
+    </h1>
+    <div class="post-meta">
+
+<span title='2024-09-04 15:48:06 +0200 CEST'>September 4, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><h1 id="intro-to-git-and-github">Intro to Git and github<a hidden class="anchor" aria-hidden="true" href="#intro-to-git-and-github">#</a></h1>
+<h2 id="adding-locally-hosted-code-to-github">Adding locally hosted code to GitHub<a hidden class="anchor" aria-hidden="true" href="#adding-locally-hosted-code-to-github">#</a></h2>
+<p>The most straight forward way to push your locally stored code to a new repository is to first -</p>
+<h3 id="initialize-a-git-repository">Initialize a Git repository<a hidden class="anchor" aria-hidden="true" href="#initialize-a-git-repository">#</a></h3>
+<p><strong>NOTE.</strong> Make sure that you&rsquo;re using the latest version of Git (2.28.0)</p>
+<ol>
+<li>
+<p>Using Git Bash, navigate to the root directory where your code is stored.</p>
+</li>
+<li>
+<p>Inside the directory, we can now initialize our local directory as a Git repository, which means that we&rsquo;re marking this location to be a recognized (which we then can link to a remote Git repository which we will push our local code to later on).</p>
+</li>
+</ol>
+<p>Initialize the Git repository with this command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init -b main
+</span></span></code></pre></div><p><em>Your default branch is set with the -b flag</em></p>
+<p><strong>(Optional) For a more detailed rundown:</strong> when we initialize a new Git repository with <code>git init</code> we create a <code>.git</code> folder inside your local directory. This folder contains all the information that Git needs to track changes to your codebase.</p>
+<ul>
+<li>HEAD: A file that points to the current branch.</li>
+<li>config: A file which stores configuration options.</li>
+<li>description: Displays a repository description.</li>
+<li>index: A file that represents the staging area.</li>
+<li>objects/: A directory that stores all the &ldquo;objects&rdquo; which include blobs(files), trees(directories) and commits(reference to a tree, parent commit, etc.).</li>
+<li>refs/: Contains pointers to commit objects.</li>
+<li>info/: Directory which contains a file for ignored patterns.</li>
+<li>hooks/: Contains example scripts</li>
+</ul>
+<p>These files and directories are basically there to ensure that Git functions properly. They track history of changes, manage branches and commmits and it stores configuration settings. By copying the <code>.git</code> folder inside your local directory, you can essentially clone your repository. But do note that altering the <code>.git</code> folder manually without knowing what you&rsquo;re doing might be risky as it could corrupt your Git repository.</p>
+<ol start="3">
+<li>We can now add the desired files to our freshly made local repository. (This stages them for the first commit. Staging refers to having marked a modified file in its current version to go into your next commit snapshot.)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># . notation adds ALL of our files in the local repository (specify using the filename if you want to add them individually).</span>
+</span></span></code></pre></div><p>In this step we&rsquo;re staging our desired files to commit later. We can unstage a file using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git reset HEAD example_file<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span></code></pre></div><ol start="4">
+<li>Now we can commit the files that we&rsquo;ve added(staged) to our local repository.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;I did a commit :)&#34;</span>
+</span></span></code></pre></div><p>This commits the tracked changes and prepares them to be pushed to a remote repository later on. (If needed, to remove this commit and modify the file we can use <code>git reset --soft HEAD~1</code> and commit and add the file again)</p>
+<p>What staging and commiting does is that when &ldquo;staging&rdquo; (git add&hellip;) we&rsquo;re previewing what files that will go into our next commit, think of it as a preview of the changes that will be included in the commit. In this step, we can unstage if we realized that we&rsquo;ve added the wrong files or made a mistake in our files. &ldquo;Committing&rdquo; is when we&rsquo;re taking a snapshot of the file&rsquo;s (or set of files) current state which is then permanently stored in the Git database.</p>
+<h2 id="adding-our-local-repository-to-github-using-git">Adding our local repository to GitHub using Git<a hidden class="anchor" aria-hidden="true" href="#adding-our-local-repository-to-github-using-git">#</a></h2>
+<ol>
+<li>
+<p>Create a new repository on GitHub.com and to avoid hassle, don&rsquo;t add anything extra to your repository unless you know what you need to add. You can always add these files later on after you&rsquo;ve pushed your code/project to GitHub.</p>
+</li>
+<li>
+<p>After creating your repository, go to the top of the repo and copy the remote repository URL.</p>
+</li>
+<li>
+<p>Open up Git Bash and locate your working directory of your code/project and add the URL for the remote repository which is where your local repository&rsquo;s content will be pushed. Run the following command and replace <code>remote-url</code> with your remote repository&rsquo;s URL (the one we already copied)</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin remote-url
+</span></span></code></pre></div><ol start="4">
+<li>Afterwards, verify that you&rsquo;ve set the remote URL correctly by running</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote -v
+</span></span></code></pre></div><ol start="5">
+<li>Now to push our changes in our local repository to GitHub.com. We run the following command</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>If it&rsquo;s the case that your default branch isn&rsquo;t named &ldquo;main&rdquo;, replace it with the name of your default branch.</p>
+<h2 id="troubleshooting">Troubleshooting<a hidden class="anchor" aria-hidden="true" href="#troubleshooting">#</a></h2>
+<p>In recent years GitHub has foregone the usage of any and all passwords for committing and has now implemented personal access tokens both for authorizing the commit for the first time. One upside with personal access tokens is the added security of having no need for a password and you instead store it on your machine locally. Although it can be a hassle, it is how it is now.</p>
+<p>These tokens are used to push a change to any GitHub repository and they can be generated on the website by going to your account settings - developer mode - and in the Personal Access Token (Beta), generate your token with the permission settings needed (usually just ticking every tick is adequate enough).</p>
+<ol>
+<li>Now In the case where you&rsquo;re using a  freshly made token, generated in a while, you do as per usual: After a commit/push to GitHub, the terminal prompts you to input your GitHub username as instructed and when asked for your password, you copy the generated token url and use that as your password input.</li>
+</ol>
+<p>If your Git has been setup with a credential manager(which is usually installed with Git the first time), you will store the access token that you&rsquo;ve generated so to not do it every- single- time- that you&rsquo;re committing.</p>
+<h2 id="troubleshooting-2">Troubleshooting 2<a hidden class="anchor" aria-hidden="true" href="#troubleshooting-2">#</a></h2>
+<p>If you&rsquo;ve made changes in your online repository then you might have problems if your local repository is behind.
+If so then you have to <code>git pull</code> to get up to date with the online repo before you can push your changes.</p>
+<p>or &hellip;</p>
+<p>you might also have to do <code>git branch --set-upstream-to=origin/&lt;branch&gt; main</code>, if you&rsquo;re not in a different branch then you can just omit <code>&lt;branch&gt;</code>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/journal/">Journal</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
