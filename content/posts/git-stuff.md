@@ -12,7 +12,7 @@ The most straight forward way to push your locally stored code to a new reposito
 
 ### Initialize a Git repository
 
-**NOTE.** Make sure that you're using the latest version of Git (2.28.0)
+**NOTE.** Make sure that you're using the latest version of Git (2.55.0)
 
 1. Using Git Bash, navigate to the root directory where your code is stored.
 
